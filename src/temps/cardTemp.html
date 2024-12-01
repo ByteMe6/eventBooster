@@ -1,14 +1,14 @@
-<template>
+<template id="template">
     <div class="card">
-  <img class="cardImg" src="https://picsum.photos/180/227" />
+  <img class="cardImg" {{src}} />
 
-  <h3 class="cardTitle">${name}</h3>
+  <h3 class="cardTitle">{{title}}</h3>
 
-  <p class="cardDate"><span class="cardDateIcon"> 🗓️ </span> ${}</p>
+  <p class="cardDate"><span class="cardDateIcon"> 🗓️ </span> {{date}}</p>
 
   <p class="cardLocation">
     <span class="cardLocIcon"> 📍 </span>
-    Palace of Ukraine
+    {{loc}}
   </p>
 </div>
 </template>
