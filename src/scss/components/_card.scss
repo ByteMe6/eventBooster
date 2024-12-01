@@ -1,7 +1,16 @@
 .cardImg {
-    border-radius: 50px 0px 50px 0px;
     width: 11.25rem;
     height: 14.188rem;
+}
+.cardImg {
+    width: 100%;
+    height: 200px;
+    /* Высота, на которую вы хотите обрезать изображение */
+    object-fit: cover;
+    /* Обрезает изображение, сохраняя пропорции */
+    border-radius: 8px;
+    /* Сделать углы закругленными, если нужно */
+    border-radius: 50px 0px 50px 0px;
 }
 
 .cardTitle {
@@ -41,3 +50,11 @@
     letter-spacing: 0%;
     text-align: center;
 }
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 2.5rem;
+}
+
