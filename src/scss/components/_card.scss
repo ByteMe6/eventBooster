@@ -1,0 +1,43 @@
+.cardImg {
+    border-radius: 50px 0px 50px 0px;
+    width: 11.25rem;
+    height: 14.188rem;
+}
+
+.cardTitle {
+    color: rgb(220, 86, 197);
+    font-family: Montserrat, Helvetica;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.card {
+    padding: 0.7rem;
+    width: 11.25rem;
+    background: url("https://raw.githubusercontent.com/ByteMe6/eventBooster/refs/heads/master/src/img/cardBg.png");
+    background-position: right 0 top 0;
+    background-repeat: no-repeat;
+}
+
+.cardDate {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.cardLocation {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: center;
+}
