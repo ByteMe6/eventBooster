@@ -1,0 +1,155 @@
+/* codepen shit */
+body {
+  background: black;
+}
+
+/* styles */
+.smallRoundIcon {
+  border-radius: 20rem;
+  width: 9rem;
+  height: 9rem;
+}
+
+.cardFullScreen {
+  border-radius: 18.75rem 0 18.75rem 0; /* 300px -> 18.75rem */
+  background: rgb(255, 242, 253);
+  padding: 3.75rem 1.875rem; /* 60px -> 3.75rem, 30px -> 1.875rem */
+  text-align: center;
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 95%;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px -> 0.25rem, 10px -> 0.625rem */
+}
+
+.closeModalBtn {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 1.875rem; /* 30px -> 1.875rem */
+  top: 3.75rem; /* 60px -> 3.75rem */
+}
+
+.cftch3 {
+  color: rgb(220, 86, 197);
+  font-family: Montserrat, Helvetica;
+  font-size: 1.5rem; /* 24px -> 1.5rem */
+  font-weight: 600;
+  line-height: 1.8125rem; /* 29px -> 1.8125rem */
+  letter-spacing: 0%;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.cardFullscreenMainContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BigPoster {
+  width: 23rem; /* 400px -> 25rem */
+  height: 34.3rem; /* 641px -> 40.0625rem */
+  object-fit: cover;
+}
+
+p {
+  font-family: Montserrat, Helvetica;
+  text-align: start;
+  font-size: 20px;
+}
+.ILoveBootstrapIfuckCodepen {
+  border-radius: 5px;
+  background: rgb(76, 0, 254);
+  color: white;
+  display: block;
+  width: 145px;
+  height: 40px;
+  border: 0;
+  text-align: center;
+  line-height: 40px; /* Центрирование текста по вертикали */
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.ILoveBootstrapIfuckCodepen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-45deg);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.ILoveBootstrapIfuckCodepen:hover {
+  transform: scale(1.1);
+}
+
+.ILoveBootstrapIfuckCodepen:hover::before {
+  left: 100%;
+  transition: 0.5s;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgb(76, 0, 254), 0 0 20px rgb(76, 0, 254);
+  }
+  100% {
+    box-shadow: 0 0 20px rgb(76, 0, 254), 0 0 40px rgb(76, 0, 254);
+  }
+}
+
+.ILoveBootstrapIfuckCodepen {
+  animation: glow 1.5s infinite alternate;
+}
+
+.cardFullscreenTextContainer{
+  margin-left: 5.30rem;
+}
+
+.WHEREISBOOTSTRAP {
+  background: transparent;
+  border: solid 3px rgb(76, 0, 254);
+  border-radius: 10px;
+  padding: 7px 20px;
+  color: rgb(76, 0, 254);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.WHEREISBOOTSTRAP::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(76, 0, 254, 0.2), rgba(76, 0, 254, 0.7), rgba(76, 0, 254, 0.2));
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.WHEREISBOOTSTRAP:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.WHEREISBOOTSTRAP:hover::before {
+  left: 0;
+}
