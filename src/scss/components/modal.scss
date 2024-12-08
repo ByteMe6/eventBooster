@@ -1,19 +1,15 @@
-/* codepen shit */
-body {
-  background: black;
+.smallRoundIcon{
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
-/* styles */
-.smallRoundIcon {
-  border-radius: 20rem;
-  width: 9rem;
-  height: 9rem;
-}
-
+/* Стили для модального окна */
 .cardFullScreen {
-  border-radius: 18.75rem 0 18.75rem 0; /* 300px -> 18.75rem */
+  border-radius: 18.75rem 0 18.75rem 0; /* возвращен оригинальный border-radius */
   background: rgb(255, 242, 253);
-  padding: 3.75rem 1.875rem; /* 60px -> 3.75rem, 30px -> 1.875rem */
+  padding: 3.75rem 1.875rem; /* отступы */
   text-align: center;
   position: fixed;
   width: 80%;
@@ -21,44 +17,52 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 95%;
-  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* 4px -> 0.25rem, 10px -> 0.625rem */
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* тень */
+  overflow: hidden; /* Убираем полосу прокрутки */
 }
 
+/* Стили для кнопки закрытия модального окна */
 .closeModalBtn {
   background: transparent;
   border: 0;
   position: absolute;
-  right: 1.875rem; /* 30px -> 1.875rem */
-  top: 3.75rem; /* 60px -> 3.75rem */
+  right: 1.875rem; /* отступ */
+  top: 3.75rem; /* отступ */
 }
 
+/* Стили для заголовка */
 .cftch3 {
   color: rgb(220, 86, 197);
   font-family: Montserrat, Helvetica;
-  font-size: 1.5rem; /* 24px -> 1.5rem */
+  font-size: 1.5rem; /* размер шрифта */
   font-weight: 600;
-  line-height: 1.8125rem; /* 29px -> 1.8125rem */
+  line-height: 1.8125rem; /* высота строки */
   letter-spacing: 0%;
   text-align: start;
   text-transform: uppercase;
 }
 
+/* Основной контент */
 .cardFullscreenMainContent {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
 }
 
+/* Стили для изображения */
 .BigPoster {
-  width: 23rem; /* 400px -> 25rem */
-  height: 34.3rem; /* 641px -> 40.0625rem */
-  object-fit: cover;
+  width: 23rem; /* оставлены исходные размеры */
+  height: 34.3rem; /* оставлены исходные размеры */
+  object-fit: cover; /* сохранение пропорций */
 }
 
+/* Стили для текста */
 p {
   font-family: Montserrat, Helvetica;
   text-align: start;
   font-size: 20px;
 }
+
+/* Кнопка с эффектом */
 .ILoveBootstrapIfuckCodepen {
   border-radius: 5px;
   background: rgb(76, 0, 254);
@@ -101,6 +105,7 @@ p {
   transition: 0.5s;
 }
 
+/* Анимация свечения */
 @keyframes glow {
   0% {
     box-shadow: 0 0 10px rgb(76, 0, 254), 0 0 20px rgb(76, 0, 254);
@@ -114,10 +119,12 @@ p {
   animation: glow 1.5s infinite alternate;
 }
 
-.cardFullscreenTextContainer{
+/* Контейнер текста */
+.cardFullscreenTextContainer {
   margin-left: 5.30rem;
 }
 
+/* Кнопка с градиентом */
 .WHEREISBOOTSTRAP {
   background: transparent;
   border: solid 3px rgb(76, 0, 254);
@@ -152,4 +159,29 @@ p {
 
 .WHEREISBOOTSTRAP:hover::before {
   left: 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .cardFullScreen {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .BigPoster {
+    width: 100%;
+    height: auto;
+  }
+
+  .cardFullscreenTextContainer {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .ILoveBootstrapIfuckCodepen,
+  .WHEREISBOOTSTRAP {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
