@@ -44,9 +44,16 @@ function createCard(arr) {
       let date = e.dates?.start?.localDate || "No date available";
       let loc = e._embedded?.venues[0]?.name || "No location available";
       let src = e.images?.[0]?.url || "https://via.placeholder.com/150";
+      let des = e.description || "no info"
+      let price = "from " + e.priceRanges[0].min || 'no price'
+      let valuta = e.priceRanges[0].currency || ' '
+      let buyBilleti = e._embedded.venues.url
+
+      console.log(e)
 
       // HTML для карточки
-      return `<div class="card" data-title="${title}" data-date="${date}" data-location="${loc}" data-image="${src}">
+      return `<div class="card" data-title="${title}" data-date="${date}" data-location="${loc}" data-image="${src}" data-des="${des}" data-minPrice="${price}" data-valuta="${valuta}
+data-billet="${buyBilleti}">
                 <img class="cardImg" src="${src}" alt="Event image" />
                 <h3 class="cardTitle">${title}</h3>
                 <p class="cardDate"><span class="cardDateIcon"> 🗓️ </span> ${date}</p>
@@ -74,9 +81,10 @@ function openModal(card) {
   const date = card.getAttribute('data-date');
   const location = card.getAttribute('data-location');
   const image = card.getAttribute('data-image');
-  let  info = "shit"
-
-  console.log(card);
+  let info = card.getAttribute('data-des');
+  let pricem = card.getAttribute('data-minPrice');
+  let val = card.getAttribute('data-valuta');
+  let billeti = card.getAttribute('data-billet');
 
   // Создаем модалку с необходимыми данными
   const modal = document.createElement('div');
@@ -99,7 +107,9 @@ function openModal(card) {
         <p>${date}</p>
         <h3 class="cftch3">Where</h3>
         <p>${location}</p>
-        <button class="ILoveBootstrapIfuckCodepen">BUY TICKETS</button>
+                <h3 class="cftch3">Price</h3>
+        <p>${pricem} ${val}</p>
+        <a href="${billeti}" class="ILoveBootstrapIfuckCodepen" style="margin-top: 5px;">BUY TICKETS</a>
       </div>
     </div>
     <button class="WHEREISBOOTSTRAP">MORE FROM THIS AUTHOR</button>
