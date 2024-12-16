@@ -1,5 +1,5 @@
 import { openModal } from './modal.js';
-import { createCard } from './dom.js';
+// import { createCard } from './dom.js';
 
 export function createCard(arr) {
   try {
