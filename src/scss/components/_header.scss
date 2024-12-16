@@ -1,11 +1,11 @@
 .heading {
   color: $pink;
   font-family: Montserrat;
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 900;
-  line-height: 61px;
+  line-height: 3.8125rem;
   letter-spacing: 0%;
-  max-width: 600px;
+  max-width: 37.5rem;
   align-items: center;
   text-align: left;
   margin: 0 auto;
@@ -15,14 +15,14 @@
 }
 header {
   background: url('../img/topBg.png');
-  height: 27.875rem;
+  height: 17.4925rem;
 }
 .inpBoxItem {
-  border-radius: 20px;
+  border-radius: 1.25rem;
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
   border: 0;
-  padding: 10px;
+  padding: 0.625rem;
   width: fit-content;
   display: inline;
 
@@ -34,7 +34,7 @@ header {
   font-family: Montserrat;
 }
 .inputBox {
-  display: flexbox;
+  display: flex;
   align-items: center;
   text-align: center;
   margin: 0 auto;

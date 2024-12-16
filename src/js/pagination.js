@@ -19,6 +19,7 @@ function updatePagination(page, totalPages) {
     for (let i = 1; i <= actualPages; i++) {
       const pageButton = document.createElement('button');
       pageButton.innerText = i;
+      pageButton.classList.add("pagBtn")
       pageButton.classList.toggle('active', i === page);
       pageButton.onclick = () => {
         currentPage = i;

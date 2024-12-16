@@ -1,0 +1,205 @@
+.smallRoundIcon{
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* Стили для модального окна */
+.cardFullScreen {
+  border-radius: $border-radius-large; /* возвращен оригинальный border-radius */
+  background: $light-pink;
+  padding: $padding-large; /* отступы */
+  text-align: center;
+  position: fixed;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 95%;
+  box-shadow: $box-shadow; /* тень */
+  overflow: hidden; /* Убираем полосу прокрутки */
+
+  .cardFullscreenTextContainer {
+    max-height: 70vh;
+    overflow-y: auto;
+    
+    /* Скрываем стандартный скроллбар */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    
+    /* Скрываем скроллбар для Chrome, Safari и Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Плавный скролл */
+    scroll-behavior: smooth;
+  }
+}
+
+/* Стили для кнопки закрытия модального окна */
+.closeModalBtn {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 1.875rem; /* отступ */
+  top: 3.75rem; /* отступ */
+}
+
+/* Стили для заголовка */
+.cftch3 {
+  color: $pink;
+  font-family: Montserrat, Helvetica;
+  font-size: $font-size-large; /* размер шрифта */
+  font-weight: 600;
+  line-height: 1.8125rem; /* высота строки */
+  letter-spacing: 0%;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+/* Основной контент */
+.cardFullscreenMainContent {
+  display: flex;
+  justify-content: left;
+}
+
+/* Стили для изображения */
+.BigPoster {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* сохранение пропорций */
+}
+
+/* Стили для текста */
+p {
+  font-family: Montserrat, Helvetica;
+  text-align: start;
+  font-size: $font-size-medium;
+}
+
+/* Кнопка с эффектом */
+.ILoveBootstrapIfuckCodepen {
+  border-radius: $border-radius-small;
+  background: rgb(76, 0, 254);
+  color: $white;
+  display: block;
+  width: 145px;
+  height: 40px;
+  border: 0;
+  text-align: center;
+  line-height: 40px; /* Центрирование текста по вертикали */
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.ILoveBootstrapIfuckCodepen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-45deg);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.ILoveBootstrapIfuckCodepen:hover {
+  transform: scale(1.1);
+}
+
+.ILoveBootstrapIfuckCodepen:hover::before {
+  left: 100%;
+  transition: 0.5s;
+}
+
+/* Анимация свечения */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgb(76, 0, 254), 0 0 20px rgb(76, 0, 254);
+  }
+  100% {
+    box-shadow: 0 0 20px rgb(76, 0, 254), 0 0 40px rgb(76, 0, 254);
+  }
+}
+
+.ILoveBootstrapIfuckCodepen {
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Контейнер текста */
+.cardFullscreenTextContainer {
+  margin-left: 0;
+  font-size: $font-size-small;
+}
+
+/* Кнопка с градиентом */
+.WHEREISBOOTSTRAP {
+  background: transparent;
+  border: solid 3px rgb(76, 0, 254);
+  border-radius: $border-radius-medium;
+  padding: 7px 20px;
+  color: rgb(76, 0, 254);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.WHEREISBOOTSTRAP::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(76, 0, 254, 0.2), rgba(76, 0, 254, 0.7), rgba(76, 0, 254, 0.2));
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.WHEREISBOOTSTRAP:hover {
+  color: $white;
+  transform: scale(1.1);
+}
+
+.WHEREISBOOTSTRAP:hover::before {
+  left: 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .cardFullScreen {
+    width: 90%;
+    padding: $padding-medium;
+  }
+
+  .BigPoster {
+    width: 100%;
+    height: auto;
+  }
+
+  .cardFullscreenTextContainer {
+    margin-left: 0;
+    font-size: $font-size-small;
+  }
+
+  .ILoveBootstrapIfuckCodepen,
+  .WHEREISBOOTSTRAP {
+    width: 100%;
+    font-size: 0.875rem;
+    padding: 0.625rem;
+  }
+}
