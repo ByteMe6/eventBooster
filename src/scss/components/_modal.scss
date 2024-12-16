@@ -194,18 +194,17 @@ p {
     margin-left: 0;
     font-size: 0.9rem;
   }
-
   .ILoveBootstrapIfuckCodepen,
   .WHEREISBOOTSTRAP {
     width: 100%;
-    font-size: 14px;
-    padding: 10px;
+    font-size: 0.875rem; // 14px converted to rem
+    padding: 0.625rem; // 10px converted to rem
   }
-}
-.input-box{
-    justify-content: center;
 }
 
 .inputBox {
   justify-content: center;
+  .searchInput{
+    margin-right: 0.625rem; // 10px converted to rem
+  }
 }
