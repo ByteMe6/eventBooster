@@ -7,17 +7,17 @@
 
 /* Стили для модального окна */
 .cardFullScreen {
-  border-radius: $border-radius-large; /* возвращен оригинальный border-radius */
-  background: $light-pink;
-  padding: $padding-large; /* отступы */
+  border-radius: 18.75rem 0 18.75rem 0; /* возвращен оригинальный border-radius */
+  background: rgb(255, 242, 253);
+  padding: 3.75rem 1.875rem; /* отступы */
   text-align: center;
   position: fixed;
-  width: 90%;
+  width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 95%;
-  box-shadow: $box-shadow; /* тень */
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3); /* тень */
   overflow: hidden; /* Убираем полосу прокрутки */
 
   .cardFullscreenTextContainer {
@@ -49,9 +49,9 @@
 
 /* Стили для заголовка */
 .cftch3 {
-  color: $pink;
+  color: rgb(220, 86, 197);
   font-family: Montserrat, Helvetica;
-  font-size: $font-size-large; /* размер шрифта */
+  font-size: 1.5rem; /* размер шрифта */
   font-weight: 600;
   line-height: 1.8125rem; /* высота строки */
   letter-spacing: 0%;
@@ -67,8 +67,8 @@
 
 /* Стили для изображения */
 .BigPoster {
-  width: 100%;
-  height: auto;
+  width: 23rem; /* оставлены исходные размеры */
+  height: 34.3rem; /* оставлены исходные размеры */
   object-fit: cover; /* сохранение пропорций */
 }
 
@@ -76,14 +76,14 @@
 p {
   font-family: Montserrat, Helvetica;
   text-align: start;
-  font-size: $font-size-medium;
+  font-size: 20px;
 }
 
 /* Кнопка с эффектом */
 .ILoveBootstrapIfuckCodepen {
-  border-radius: $border-radius-small;
+  border-radius: 5px;
   background: rgb(76, 0, 254);
-  color: $white;
+  color: white;
   display: block;
   width: 145px;
   height: 40px;
@@ -138,15 +138,14 @@ p {
 
 /* Контейнер текста */
 .cardFullscreenTextContainer {
-  margin-left: 0;
-  font-size: $font-size-small;
+  margin-left: 5.30rem;
 }
 
 /* Кнопка с градиентом */
 .WHEREISBOOTSTRAP {
   background: transparent;
   border: solid 3px rgb(76, 0, 254);
-  border-radius: $border-radius-medium;
+  border-radius: 10px;
   padding: 7px 20px;
   color: rgb(76, 0, 254);
   font-size: 16px;
@@ -171,7 +170,7 @@ p {
 }
 
 .WHEREISBOOTSTRAP:hover {
-  color: $white;
+  color: white;
   transform: scale(1.1);
 }
 
@@ -183,7 +182,7 @@ p {
 @media (max-width: 768px) {
   .cardFullScreen {
     width: 90%;
-    padding: $padding-medium;
+    padding: 2rem;
   }
 
   .BigPoster {
@@ -193,13 +192,20 @@ p {
 
   .cardFullscreenTextContainer {
     margin-left: 0;
-    font-size: $font-size-small;
+    font-size: 0.9rem;
   }
 
   .ILoveBootstrapIfuckCodepen,
   .WHEREISBOOTSTRAP {
     width: 100%;
-    font-size: 0.875rem;
-    padding: 0.625rem;
+    font-size: 14px;
+    padding: 10px;
   }
+}
+.input-box{
+    justify-content: center;
+}
+
+.inputBox {
+  justify-content: center;
 }
