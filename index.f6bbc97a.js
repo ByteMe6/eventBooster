@@ -44,6 +44,5 @@ const t=[{countryCode:"AU",country:"Australia"},{countryCode:"AD",country:"Andor
         </a>
       </div>
     </div>
-    <button class="WHEREISBOOTSTRAP">MORE FROM THIS AUTHOR</button>
   `,document.body.appendChild(o),o.querySelector(".closeModalBtn").addEventListener("click",()=>{document.body.removeChild(o)}),o.addEventListener("click",t=>{t.target===o&&document.body.removeChild(o)})}(t.dataset)})})}catch(t){console.error("Error creating cards:",t),document.querySelector(".main").innerHTML="<p>Failed to load events. Please try again later.</p>"}}(o),a(n,t)}else e('<p class="noEvents">No events found</p>'),a(0,0)}catch(t){console.error("Error fetching events:",t),e('<p class="error">Error loading events. Please try again later.</p>'),a(0,0)}}let d="",i="";document.addEventListener("DOMContentLoaded",()=>{var o;let r;!function(o){let e=document.getElementById("countriesList");e.innerHTML='<option value="">All Countries</option>'+t.map(({countryCode:t,country:o})=>`<option value="${t}">${o}</option>`).join(""),e.addEventListener("change",t=>{o(t.target.value)})}(t=>{i=t,n=1,(d||i)&&u(d,i)});let c=document.querySelector(".searchInput");c.addEventListener("input",(o=()=>{d=c.value,n=1,d||i?u(d,i):(e(""),document.getElementById("pagination").innerHTML="")},function(...t){clearTimeout(r),r=setTimeout(()=>o.apply(this,t),500)})),e(""),document.getElementById("pagination").innerHTML=""});
-//# sourceMappingURL=index.64677d79.js.map
+//# sourceMappingURL=index.f6bbc97a.js.map
