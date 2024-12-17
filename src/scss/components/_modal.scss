@@ -89,7 +89,7 @@ p {
   height: 40px;
   border: 0;
   text-align: center;
-  line-height: 40px; /* Центрирование текста по вертикали */
+  line-height: 40px;
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -98,28 +98,31 @@ p {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
-}
 
-.ILoveBootstrapIfuckCodepen::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 300%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-  transform: skewX(-45deg);
-  z-index: -1;
-  transition: 0.5s;
-}
+  &:hover {
+    transform: scale(1.1);
+  }
 
-.ILoveBootstrapIfuckCodepen:hover {
-  transform: scale(1.1);
-}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    transform: skewX(-45deg);
+    z-index: -1;
+    transition: 0.5s;
+  }
 
-.ILoveBootstrapIfuckCodepen:hover::before {
-  left: 100%;
-  transition: 0.5s;
+  &:hover::before {
+    left: 100%;
+    transition: 0.5s;
+  }
+
+  /* Анимация свечения */
+  animation: glow 1.5s infinite alternate;
 }
 
 /* Анимация свечения */
@@ -132,16 +135,12 @@ p {
   }
 }
 
-.ILoveBootstrapIfuckCodepen {
-  animation: glow 1.5s infinite alternate;
-}
-
 /* Контейнер текста */
 .cardFullscreenTextContainer {
   margin-left: 5.30rem;
 }
 
-/* Кнопка с градиентом */
+/* Стили для кнопки с градиентом */
 .WHEREISBOOTSTRAP {
   background: transparent;
   border: solid 3px rgb(76, 0, 254);
@@ -155,27 +154,27 @@ p {
   overflow: hidden;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
-}
 
-.WHEREISBOOTSTRAP::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(76, 0, 254, 0.2), rgba(76, 0, 254, 0.7), rgba(76, 0, 254, 0.2));
-  transition: all 0.5s;
-  z-index: -1;
-}
+  &:hover {
+    color: white;
+    transform: scale(1.1);
+  }
 
-.WHEREISBOOTSTRAP:hover {
-  color: white;
-  transform: scale(1.1);
-}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(76, 0, 254, 0.2), rgba(76, 0, 254, 0.7), rgba(76, 0, 254, 0.2));
+    transition: all 0.5s;
+    z-index: -1;
+  }
 
-.WHEREISBOOTSTRAP:hover::before {
-  left: 0;
+  &:hover::before {
+    left: 0;
+  }
 }
 
 /* Адаптивные стили */
@@ -207,4 +206,10 @@ p {
   .searchInput{
     margin-right: 0.625rem; // 10px converted to rem
   }
+}
+
+.ILoveBootstrapIfuckCodepen{
+  font-family: Montseratt, "Helvetica";
+  text-decoration: none;
+  margin: 0.8125rem 3.125rem 1.25rem;
 }
