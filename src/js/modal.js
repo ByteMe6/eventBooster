@@ -32,7 +32,6 @@ export function openModal(data) {
         </a>
       </div>
     </div>
-    <button class="WHEREISBOOTSTRAP">MORE FROM THIS AUTHOR</button>
   `;
 
   document.body.appendChild(modal);

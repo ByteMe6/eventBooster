@@ -1,0 +1,24 @@
+.pagBtn {
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  padding: 0.3125rem;
+  transition: 0.5s;
+  border-radius: 0.625rem 0 0.625rem 0;
+  margin: 0.3125rem;
+  &:hover {
+    color: $pink;
+  }
+}
+
+.active {
+  color: $pink;
+  border: 0.125rem solid $pink;
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.25rem;
+}

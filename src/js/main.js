@@ -1,22 +1,35 @@
 import { debounce } from './debounce.js';
 import { initializeCountrySelect } from './countrySelect.js';
-import { searchData } from './search.js';
+import { fetchAndDisplayEvents, resetPagination } from './pagination.js';
+import { updateMainContent } from './dom.js';
+import { createCard } from './card.js';
+import { apiKey } from "./api.js";
 
-const apiKey = 'GuFBpVgQ1pTfyV0ZT9FA4QxjKXxhnZzD';
 let searchInputValue = '';
 let selectedCountry = '';
 
 document.addEventListener('DOMContentLoaded', () => {
   initializeCountrySelect((country) => {
     selectedCountry = country;
-    searchData(apiKey, searchInputValue, selectedCountry);
+    resetPagination();
+    if (searchInputValue || selectedCountry) {
+      fetchAndDisplayEvents(searchInputValue, selectedCountry);
+    }
   });
 
   const searchInput = document.querySelector('.searchInput');
   searchInput.addEventListener('input', debounce(() => {
     searchInputValue = searchInput.value;
-    searchData(apiKey, searchInputValue, selectedCountry);
+    resetPagination();
+    if (searchInputValue || selectedCountry) {
+      fetchAndDisplayEvents(searchInputValue, selectedCountry);
+    } else {
+      updateMainContent('');
+      document.getElementById('pagination').innerHTML = '';
+    }
   }, 500));
 
-  searchData(apiKey, '', '');
-}); 
+  updateMainContent('');
+  document.getElementById('pagination').innerHTML = '';
+});
+
