@@ -1,6 +1,32 @@
 <header>
-  <img src="./img/logo.png" class="headerLogo" alt="" />
-
+<picture class="headerLogo">
+          <source
+           srcset="
+              ./img/logo-1x.png 1x,
+              ./img/logo-2x.png 2x,
+              ./img/logo-3x.png 3x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ./img/logo-t-1x.png 1x,
+              ./img/logo-t-2x.png 2x,
+              ./img/logo-t-x3.png 3x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+               srcset="
+              ./img/logo-tf-1x.png 1x,
+              ./img/logo-tf-2x.png 2x,
+              ./img/logo-tf-3x.png 3x
+            
+            media="(min-width:0px)"
+          />
+          <img  src="./img/logo-tf-3x.png" alt="Навушники" />
+        
+        </picture>
   <h1 class="heading">FIND BEST EVENTS AROUND THE WORLD</h1>
 
   <div class="inputBox">
