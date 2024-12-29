@@ -1,5 +1,9 @@
 export const countries = [
   {
+        countryCode: "",
+    country: "All countries",
+  },
+  {
     countryCode: "AU",
     country: "Australia",
   },

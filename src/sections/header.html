@@ -1,42 +1,22 @@
 <header>
-<picture class="headerLogo">
-          <source
-           srcset="
-              ./img/logo-1x.png 1x,
-              ./img/logo-2x.png 2x,
-              ./img/logo-3x.png 3x
-            "
-            media="(min-width:1200px)"
-          />
-          <source
-            srcset="
-              ./img/logo-t-1x.png 1x,
-              ./img/logo-t-2x.png 2x,
-              ./img/logo-t-x3.png 3x
-            "
-            media="(min-width:768px)"
-          />
-          <source
-               srcset="
-              ./img/logo-tf-1x.png 1x,
-              ./img/logo-tf-2x.png 2x,
-              ./img/logo-tf-3x.png 3x
-
-            media="(min-width:0px)"
-          />
-          <img  src="./img/logo-tf-3x.png" alt="Навушники" />
-
-        </picture>
+  <picture class="headerLogo">
+    <source srcset="./img/logo-1x.png 1x, ./img/logo-2x.png 2x, ./img/logo-3x.png 3x" media="(min-width:1200px)" />
+    <source srcset="./img/logo-t-1x.png 1x, ./img/logo-t-2x.png 2x, ./img/logo-tf-3x.png 3x" media="(min-width:768px)" />
+    <source srcset="./img/logo-tf-1x.png 1x, ./img/logo-tf-2x.png 2x, ./img/logo-tf-3x.png 3x" media="(min-width:0px)" />
+    <img src="./img/logo-tf-3x.png" alt="Навушники" />
+  </picture>
   <h1 class="heading">FIND BEST EVENTS AROUND THE WORLD</h1>
 
-  <div class="inputBox">
+  <div class="inputList">
     <input type="text" class="searchInput inpBoxItem" placeholder="Start searching 🔍" />
-
-    <div class="inpBoxItem">
-      <label class="p23" for="country">Choose country: </label>
-
-      <select name="country" id="countriesList">
-      </select>
+    <div class="btn-group second-input">
+      <button type="button" class="btn btn-secondary dropdown-toggle secondInputBtn" data-bs-toggle="dropdown" aria-expanded="false">
+        Choose country
+      </button>
+      <ul class="dropdown-menu" id="countriesList">
+        <!-- Countries will be populated here by JavaScript -->
+         <!-- <a class="dropdown-item" href="#">ALl countries</a> -->
+      </ul>
     </div>
   </div>
 </header>

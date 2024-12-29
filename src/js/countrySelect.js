@@ -1,13 +1,18 @@
 import { countries } from './country.js';
 
+let curCountry = '';
+let secondInputBtn = document.querySelector(".secondInputBtn");
+
 export function initializeCountrySelect(onCountryChange) {
   const countriesList = document.getElementById('countriesList');
-  countriesList.innerHTML = `<option value="">All Countries</option>` +
+  countriesList.innerHTML = `` +
     countries.map(({ countryCode, country }) =>
-      `<option value="${countryCode}">${country}</option>`
+      `<li class="dropdown-bootstrap-li"><button class="dropdown-item" value="${countryCode}">${country}</button></li>`
     ).join('');
 
-  countriesList.addEventListener('change', (e) => {
+  countriesList.addEventListener('click', (e) => {
     onCountryChange(e.target.value);
+    curCountry = e.target.textContent;
+    secondInputBtn.textContent = curCountry;
   });
 }

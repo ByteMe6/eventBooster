@@ -32,4 +32,3 @@ document.addEventListener('DOMContentLoaded', () => {
   updateMainContent('');
   document.getElementById('pagination').innerHTML = '';
 });
-
