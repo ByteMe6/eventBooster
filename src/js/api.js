@@ -8,7 +8,7 @@ export async function fetchEvents(apiKey, searchInputValue, selectedCountry, pag
     const encodedSearch = encodeURIComponent(searchInputValue.trim());
     url += `&keyword=${encodedSearch}`;
   }
-  
+
   if (selectedCountry) {
     url += `&countryCode=${selectedCountry}`;
   }
@@ -25,3 +25,4 @@ export async function fetchEvents(apiKey, searchInputValue, selectedCountry, pag
   console.log('API Response:', data);
   return data;
 }
+
