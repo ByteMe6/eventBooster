@@ -3,10 +3,11 @@
 @import "./utils/fonts";
 @import "./utils/reset";
 
-// сецкии
-@import "./components/header";
+// секции
 @import "./components/card";
 @import "./components/modal";
 @import "./components/pagination";
+@import "./components/header";
 
-
+// адаптивные стили
+@import "./components/adapt";

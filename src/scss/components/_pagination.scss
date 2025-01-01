@@ -22,3 +22,40 @@
     flex-wrap: wrap;
     padding: 1.25rem;
 }
+
+
+#findBestEvents {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+@media (max-width: 50rem) {
+  header {
+    background: url("../img/headerBgTablet768.png");
+  }
+  #findBestEvents {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+  .inputList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .headerLogo {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
