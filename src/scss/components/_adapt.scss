@@ -150,10 +150,10 @@
   }
 }
 .headerLogo{
-  z-index: 998;
+  z-index: 997;
 }
 .cardFullScreen{
-  z-index: 999;
+  z-index: 998;
 }
 .cardImg{
   transition:all 0.5s;}
@@ -161,3 +161,10 @@
     transform: scale(1.1);
   }
 
+  .card{
+    z-index: 997;
+  }
+#countriesList{
+  position: relative;
+  z-index: 999;
+}
