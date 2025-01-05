@@ -30,6 +30,8 @@
   margin: 0 auto;
 }
 
+
+
 @media (max-width: 50rem) {
   header {
     background: url("../img/headerBgTablet768.png");
@@ -90,4 +92,7 @@
     align-items: center;    // Центрирование содержимого
     padding: 20px;          // Внутренние отступы для заголовка
   }
+}
+header {
+  max-width: 100%;
 }
