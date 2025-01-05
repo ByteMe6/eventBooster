@@ -155,3 +155,9 @@
 .cardFullScreen{
   z-index: 999;
 }
+.cardImg{
+  transition:all 0.5s;}
+  .cardImg:hover{
+    transform: scale(1.1);
+  }
+
