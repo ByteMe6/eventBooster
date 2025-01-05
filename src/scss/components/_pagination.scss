@@ -59,3 +59,35 @@
     top: 0;
   }
 }
+.heading {
+  position: absolute;
+  top: 40px;
+  transform: translateX(-50%);
+}
+@media (max-width: 800px) {
+  .heading {
+    font-size: 2rem;
+    top: 10px;
+    transform: translateX(0);
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .heading {
+    font-size: 2rem;         // Уменьшенный размер шрифта
+    line-height: 2.5rem;     // Уменьшенная высота строки
+    text-align: center;      // Центрирование текста
+    margin: 20px auto;       // Добавляем отступы сверху и снизу
+    position: relative;      // Убираем absolute позиционирование
+    width: 100%;             // Занимает всю ширину контейнера
+    padding: 10px;           // Внутренние отступы для удобства
+  }
+
+  header {
+    display: flex;
+    flex-direction: column; // Вертикальное выравнивание элементов
+    align-items: center;    // Центрирование содержимого
+    padding: 20px;          // Внутренние отступы для заголовка
+  }
+}
