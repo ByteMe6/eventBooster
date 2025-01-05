@@ -1,14 +1,20 @@
-#findBestEvents {
-  //display: inline-block;
-  //margin-left: -40%;
-  //padding: 0;
-  //max-width: 700px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+@media (max-width: 1024px) {
+  #findBestEvents{
+    color: rgb(220, 86, 197);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: center;
+    display: block;
+    width: 588px;
+    //margin-left: -150px;
+    margin: 0 auto;
+  }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   header {
     display: flex;
     flex-direction: column;
@@ -21,49 +27,39 @@
     font-size: 2rem;
     line-height: 2.5rem;
     margin: 0;
+    top: 10px;
+    transform: translateX(0);
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+    position: relative;
+    padding: 10px;
   }
 
   #findBestEvents {
-    //display: inline-block;
-    //margin-left: -40%;
-    //padding: 0;
-    //max-width: 700px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
   }
+
   main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     width: fit-content;
-    //max-width: 100%;
   }
-  .inputList {
-    display: flex;
-  }
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .headerLogo {
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
+
   .inputList {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; // space between elements
-    text-align: center; // center the text
+    gap: 1rem;
+    text-align: center;
   }
 
   .searchInput {
-    margin-bottom: 1rem; // bottom margin for the input
+    margin-bottom: 1rem;
   }
 
   .second-input {
@@ -72,23 +68,90 @@
     justify-content: center;
     gap: 1rem;
   }
+
+  .headerLogo {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  header {
+    background: url("../img/headerBgTablet768.png");
+  }
+
+  #findBestEvents {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+
+  .inputList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .headerLogo {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  #findBestEvents{
+    color: rgb(220, 86, 197);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 900;
+    //line-height: 22px;
+    //letter-spacing: 0%;
+    text-align: center;
+    display: block;
+    margin-top: 65px;
+    margin-left: 0;
+  }
+.imgCardFullscreenContainer{
+  display: none;
+}
+  .ILoveBootstrapIfuckCodepen{
+    margin-left: 0;
+    margin-right:  0;
+    width: fit-content;
+  }
+  .cardFullScreen{
+    border-radius: 0 50px;
+  }
+  header{
+    background-position-x: center;
+  }
 }
 
-//@media (max-width: 700px) {
-//  header {
-//    background: url("../img/headerBgTablet768.png");
-//    width: 100%;
-//  }
-//  #findBestEvents {
-//    display: inline-block;
-//    margin-left: -50%;
-//    //margin-bottom:  200px;
-//    padding: 0;
-//    max-width: 700px;
-//  }
-//  .inputList{
-//    display: block;
-//    margin-top: 5rem;
-//  }
-//}
-//
+.inpBoxItem, .second-input{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.2);
+}
+.second-input{
+  position: relative;
+}
+.secondInputBtn{
+  position: absolute;
+  //top: 10px;
+  bottom: 2.5px;
+  @media (max-width: 500px) {
+    bottom: 0px;
+  }
+}
+.headerLogo{
+  z-index: 998;
+}
+.cardFullScreen{
+  z-index: 999;
+}

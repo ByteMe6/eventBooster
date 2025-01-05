@@ -16,21 +16,21 @@ export function createCard(arr) {
       const currency = e.priceRanges?.[0]?.currency || "";
       const ticketUrl = e.url || "#";
       const artist = e._embedded?.attractions?.[0]?.name || "Artist not specified";
-      const prices = e.priceRanges ? e.priceRanges.map(range => 
-        `${range.type}: ${range.min} - ${range.max} ${range.currency}`).join(', ') 
+      const prices = e.priceRanges ? e.priceRanges.map(range =>
+        `${range.type}: ${range.min} - ${range.max} ${range.currency}`).join(', ')
         : "Price information not available";
 
       return `
-        <div class="card" 
-          data-title="${title}" 
-          data-date="${date}" 
-          data-location="${location}" 
-          data-image="${image}" 
-          data-description="${description}" 
-          data-min-price="${minPrice}" 
-          data-currency="${currency}" 
-          data-ticket-url="${ticketUrl}" 
-          data-artist="${artist}" 
+        <div  class="card animate__animated animate__wobble"
+          data-title="${title}"
+          data-date="${date}"
+          data-location="${location}"
+          data-image="${image}"
+          data-description="${description}"
+          data-min-price="${minPrice}"
+          data-currency="${currency}"
+          data-ticket-url="${ticketUrl}"
+          data-artist="${artist}"
           data-prices="${prices}">
           <img class="cardImg" src="${image}" alt="Event image" />
           <h3 class="cardTitle">${title}</h3>
