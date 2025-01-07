@@ -29,6 +29,8 @@
     background: url("https://raw.githubusercontent.com/ByteMe6/eventBooster/refs/heads/master/src/img/cardBg.png");
     background-position: right 0 top 0;
     background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
 }
 
 .cardDate {

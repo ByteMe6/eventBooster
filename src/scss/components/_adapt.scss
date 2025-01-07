@@ -63,6 +63,7 @@
   }
 
   .second-input {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,9 +163,9 @@
   }
 
   .card{
-    z-index: -100;
+    z-index: 0;
   }
 #countriesList{
-  position: relative;
+  // position: relative;
   z-index: 999;
 }

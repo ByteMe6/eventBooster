@@ -36,9 +36,15 @@ header {
 }
 
 #countriesList {
-  background-color: transparent;
+  position: absolute;
+  inset: auto auto 100% auto;
+  top: auto;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 0;
   color: #fff;
+  height: 80px;
 }
 
 .p23 {
